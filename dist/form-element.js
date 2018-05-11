@@ -8,9 +8,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _preactCompat = require('preact-compat');
 
-var _react2 = _interopRequireDefault(_react);
+var _preactCompat2 = _interopRequireDefault(_preactCompat);
 
 var _validator = require('./validator');
 
@@ -51,7 +51,7 @@ var FormElement = function () {
     _createClass(FormElement, [{
         key: 'createReactElement',
         value: function createReactElement() {
-            return _react2.default.createElement(this.component, _extends({}, this.originalProps, this.buildElementProps()), this.children);
+            return _preactCompat2.default.createElement(this.component, _extends({}, this.originalProps, this.buildElementProps()), this.children);
         }
     }, {
         key: 'buildElementProps',
